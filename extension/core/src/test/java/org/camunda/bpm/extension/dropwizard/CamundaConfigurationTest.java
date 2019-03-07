@@ -67,9 +67,6 @@ public class CamundaConfigurationTest {
 
   private final Validator validator = Validation.buildDefaultValidatorFactory().getValidator();
 
-  private final ConfigurationFactory<CamundaConfiguration> configurationFactory = new ConfigurationFactory<CamundaConfiguration>(CamundaConfiguration.class, validator, new ObjectMapper(), "dw.");
-
-
   @Test
   public void fails_for_empty_file() {
     thrown.expectCause(CoreMatchers.is(ConfigurationParsingException.class));
